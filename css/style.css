@@ -307,6 +307,17 @@
     box-shadow: 5px 5px 10px 0 rgb(36, 34, 34)
 }
 
+/* ---contact.html--- */
+.contact-section{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-section form{
+    width: 100%;
+}
+
 /* Media Querys */
 /* NavBar */
 @media (min-width: 575.98px){
@@ -365,7 +376,7 @@
         width: 15%;
         height: 8%;
     }
-    .btn{
+    .main-img-button .btn{
         width: 100%;
         height: 100%;
         font-size: large;
@@ -563,5 +574,12 @@
     }
     .about-items-container p{
         font-size: x-large;
+    }
+}
+
+/* contact.html */
+@media (min-width: 1024px){
+    .contact-section form{
+        width: 50%;
     }
 }
