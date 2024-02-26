@@ -44,6 +44,7 @@
     --bs-accordion-body-padding-y: 1rem;
     --bs-accordion-active-color: #ffffff;
     --bs-accordion-active-bg: #5f5f5f;
+    box-shadow: 5px 5px 10px 0 rgb(36, 34, 34);
 }
 
 /* Reutilizables */
@@ -254,15 +255,56 @@
 
 /* --- faq.html --- */
 .faq-section{
-    flex-direction: column;
-    height: 70vh;
     padding-top: 0;
+    padding-bottom: 20%;
 }
 .faq-title{
     padding-bottom: 50px;
 }
 .faq-section div{
     width: 100%;
+}
+
+/* --- about.html --- */
+.about-items{
+    margin-top: 30px;
+    background-color: #323131;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 0 rgb(36, 34, 34);
+    padding: 10px;
+}
+.about-items-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-items-container img{
+    width: 120px;
+    margin-right: 10px;
+}
+.image-a{
+    border-top-left-radius: 15px;
+}
+.image-c{
+    border-bottom-left-radius: 15px;
+}
+.about-items-container p{
+    margin: 0;
+    font-size: smaller;
+}
+.cont-a{
+    border-bottom: 1px solid #3d3838;
+}
+.cont-c{
+    border-top: 1px solid #3d3838;
+}
+.map{
+    padding-top: 6%;
+}
+.map iframe{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 0 rgb(36, 34, 34)
 }
 
 /* Media Querys */
@@ -498,5 +540,28 @@
 @media (min-width: 1440px){
     .banner{
         padding: 1% 10% 1% 10%;
+    }
+}
+
+/* ---about.html--- */
+@media (min-width: 1024px){
+    .about-items-container img{
+        width: 200px;
+        margin-right: 10%;
+    }
+    .about-items-container p{
+        font-size: medium;
+    }
+    .about-items-container{
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 2560px){
+    .about-items-container img{
+        width: 350px;
+        margin-right: 20%;
+    }
+    .about-items-container p{
+        font-size: x-large;
     }
 }
