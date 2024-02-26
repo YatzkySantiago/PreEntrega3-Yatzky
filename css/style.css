@@ -24,6 +24,28 @@
     --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
 }
 
+/* Cambia los colores del texto y el cuerpo del accordion */
+.accordion {
+    --bs-accordion-color: #ffffff;
+    --bs-accordion-bg: #323131;
+    --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+    --bs-accordion-btn-padding-x: 1.25rem;
+    --bs-accordion-btn-padding-y: 1rem;
+    --bs-accordion-btn-color: #ffffff;
+    --bs-accordion-btn-bg: #323131;
+    --bs-accordion-btn-icon: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
+    --bs-accordion-btn-icon-width: 1.25rem;
+    --bs-accordion-btn-icon-transform: rotate(-180deg);
+    --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+    --bs-accordion-btn-active-icon: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23052c65'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
+    --bs-accordion-btn-focus-border-color: #ffffff;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 25%);
+    --bs-accordion-body-padding-x: 1.25rem;
+    --bs-accordion-body-padding-y: 1rem;
+    --bs-accordion-active-color: #ffffff;
+    --bs-accordion-active-bg: #5f5f5f;
+}
+
 /* Reutilizables */
 .bgc-main{
     background-color: #282828;
@@ -116,8 +138,6 @@
 /* --- index.html --- */
 /* Hero Img */
 .main-img{
-    /* margin-top para que el nav no tape una gran parte de la imagen al estar fixed top */
-    margin-top: 10%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -217,20 +237,32 @@
 /* --- store.html --- */
 .store-section{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
     gap: 20px;
     justify-items: center;
 }
 
 /* banner */
 .mobile-banner{
-    margin-top: 14%;
     width: 100%;
 }
 .desktop-banner{
     width: 100%;
     display: none;
+}
+
+/* --- faq.html --- */
+.faq-section{
+    flex-direction: column;
+    height: 70vh;
+    padding-top: 0;
+}
+.faq-title{
+    padding-bottom: 50px;
+}
+.faq-section div{
+    width: 100%;
 }
 
 /* Media Querys */
@@ -266,11 +298,6 @@
 }
 
 /* Hero img, H1 y button index.html */
-@media (min-width: 575.98px){
-    .main-img{
-        margin-top: 5%;
-    }
-}
 @media (min-width: 637px){
     .mobile-main-img{
         display: none;
@@ -308,11 +335,6 @@
     }
     .main-img-container h1{
         width: 25%;
-    }
-}
-@media (min-width: 1400px){
-    .main-img{
-        margin-top: 2%;
     }
 }
 @media (min-width: 1920px){
@@ -439,41 +461,30 @@
         padding: 2% 10%;
     }
 }
-@media (min-width: 1025px){
+@media (min-width: 1024px){
     .store-section{
-        display: grid;
-        gap: 50px;
+        gap: 30px;
+    }
+}
+@media (min-width: 1440px){
+    .store-section{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
 
 /* banner */
-@media (min-width: 576px){
-    .mobile-banner{
-        margin-top: 9%;
-    }
-}
 @media (min-width: 637px){
     .mobile-banner{
         display: none;
     }
     .desktop-banner{
         display: block;
-        margin-top: 8%;
-    }
-}
-@media (min-width: 844px){
-    .desktop-banner{
-        margin-top: 7%;
-    }
-}
-@media (min-width: 992px){
-    .desktop-banner{
-        margin-top: 5%;
     }
 }
 @media (min-width: 1024px){
     .banner{
-        padding: 8% 10% 1% 10%;
+        padding: 1% 10% 1% 10%;
         background-color: #282828;
         display: flex;
         justify-content: center;
@@ -486,6 +497,6 @@
 }
 @media (min-width: 1440px){
     .banner{
-        padding: 6% 10% 1% 10%;
+        padding: 1% 10% 1% 10%;
     }
 }
