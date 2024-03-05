@@ -1,0 +1,200 @@
+/*--- index.html ---*/
+/* Hero Img */
+.main-img{
+    @include flex-center;
+    position: relative;
+}
+.main-img-container{
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    h1{
+        text-align: center;
+        font-weight: normal;
+        font-family: "inter-extralight";
+        margin-bottom: 5%;
+        width: 80%;
+    }
+    .main-img-button{
+        text-align: center;
+        a{
+            text-decoration: none;
+        }
+    }
+}
+.desktop-main-img{
+    display: none;
+}
+/* Section Trending Products */
+.section-main{
+    @include flex-center;
+    flex-direction: column;
+}
+.main-prod-box{
+    margin-top: 10%;
+}
+/* Section Reviews */
+.reviews-section{
+    @include flex-center;
+    padding: 0;
+    background-color: $darker-gray;
+    height: 45vh;
+    .review-box{
+        @include flex-center;
+        width: 90%;
+        height: 100%;
+        margin-left: 5%;
+        background-color: $softer-gray;
+        border-radius: 15px; 
+        flex-direction: column;
+        text-align: center;
+        box-shadow: $regular-shadow;
+        .profile-pic{
+            width: 80px;
+            border-radius: 100%;
+        }
+        .rating{
+            width: 90px;
+        }
+        p{
+            margin: 10px 20px;
+        }
+        .name{
+            font-weight: bold;
+        }
+    }
+}
+.carousel{
+    @include flex-center;
+    margin-top: 5%;
+    width: 90%;
+    height: 90%;
+    .carousel-inner{
+        height: 100%;
+        .carousel-item{
+            height: 90%;
+        }
+    }
+}
+.hidden-reviews{
+    display: none;
+}
+
+/*--- index.html media querys ---*/
+/* Hero img, H1 index.html */
+@media (min-width: 637px){
+    .mobile-main-img{
+        display: none;
+    }
+    .desktop-main-img{
+        display: block;
+    }
+    .main-img-container{
+        flex-direction: row;
+        justify-content: space-around;
+        h1{
+            text-align: start;
+            width: 50%;
+            margin: 0;
+        }
+    }
+}
+@media (min-width: 831px){
+    .main-img-container{
+        h1{
+            width: 40%;
+        }
+        .main-img-button{
+            width: 15%;
+            height: 8%;
+            .btn{
+                width: 100%;
+                height: 100%;
+                font-size: large;
+            }
+        }
+    }
+}
+@media (min-width: 1345px){
+    .desktop-main-img{
+        width: 100%;
+    }
+    .main-img-container{
+        h1{
+            width: 25%;
+        }
+    }
+}
+@media (min-width: 1920px){
+    .main-img-container{
+        h1{
+            font-size: 350%;
+        }
+    }
+}
+/* Trending Products Section */
+@media (min-width: 426px){
+    .section-main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 0.1fr);
+        gap: 0 5%;
+        grid-template-areas:
+        "title title title"
+        "product1 product2 product3"
+        ;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    .article-title{
+        grid-area: title;
+    }
+    .product-a{
+        grid-area: product1;
+    }
+    .product-b{
+        grid-area: product2;
+    }
+    .product-c{
+        grid-area: product3;
+    }
+}
+@media (min-width: 1024px){
+    .section-main{
+        padding: 5% 15%;
+    }
+}
+/* Reviews Section */
+@media (min-width: 769px){
+    .carousel{
+        display: none;
+    }
+    .hidden-reviews{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+    .reviews-section{
+        height: auto;
+        padding: 5%;
+        .review-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10%;
+            margin: 0;
+            p{
+                margin: 0;
+            }
+        }
+    }
+}
+@media (min-width: 1800px){
+    .reviews-section{
+        padding: 5% 2%;
+    }
+}

@@ -1,0 +1,21 @@
+//colors
+$main-gray: #282828;
+$softer-gray: #323131;
+$darker-gray: #171717;
+//box-shadow
+$regular-shadow: 5px 5px 10px 0 rgb(36, 34, 34);
+$darker-shadow: 0 1px 10px 0 rgb(24, 23, 23);
+//border-radius
+$radius: 15px;
+//mixins
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin card-hover{
+    &:hover{
+        background-color: $darker-gray;
+        transition: 0.1s ease-in-out;
+    }
+}

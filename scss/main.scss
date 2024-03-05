@@ -1,0 +1,20 @@
+//variables n mixins
+@import './utilities/vars';
+//reset
+@import './utilities/reset';
+//bootstrap modifications
+@import './utilities/bootstrap-mods';
+//fonts
+@import './utilities/fonts';
+//re-usable classes
+@import './utilities/general';
+//navbar
+@import './sections/nav';
+//all .html bodies
+@import './sections/body-index';
+@import './sections/body-store';
+@import './sections/body-faq';
+@import './sections/body-about';
+@import './sections/body-contact';
+//footer
+@import './sections/footer';

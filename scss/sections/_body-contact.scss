@@ -1,0 +1,18 @@
+/*--- contact.html ---*/
+.contact-section{
+    @include flex-center;
+    height: 70vh;
+    form{
+        width: 100%;
+    }
+}
+
+/*--- contact.html media querys ---*/
+
+@media (min-width: 1024px){
+    .contact-section{
+        form{
+            width: 50%;
+        }
+    }
+}
