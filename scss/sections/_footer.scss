@@ -18,6 +18,9 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 5%;
+        a{
+            @include flex-center;
+        }
         img{
             width: 25px;
             text-decoration: none;
@@ -45,7 +48,7 @@
         "info logo copy"
         ". socials .";
         justify-items: center;
-        img{
+        a{
             width: 150px;
         }
         .information{

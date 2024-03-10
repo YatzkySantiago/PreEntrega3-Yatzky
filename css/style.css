@@ -462,6 +462,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5%; }
+    .footer .socials a {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
     .footer .socials img {
       width: 25px;
       text-decoration: none; }
@@ -481,7 +485,7 @@
     gap: 0px 0px;
     grid-template-areas: "info logo copy" "info logo copy" ". socials .";
     justify-items: center; }
-    .footer img {
+    .footer a {
       width: 150px; }
     .footer .information {
       grid-area: info; }
