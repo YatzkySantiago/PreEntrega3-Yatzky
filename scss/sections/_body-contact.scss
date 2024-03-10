@@ -1,10 +1,13 @@
 /*--- contact.html ---*/
 .contact-section{
     @include flex-center;
-    height: 70vh;
+    min-height: 48vh;
     form{
         width: 100%;
     }
+}
+.contact-title{
+    @include flex-center;
 }
 
 /*--- contact.html media querys ---*/
@@ -13,6 +16,12 @@
     .contact-section{
         form{
             width: 50%;
+        }
+    }
+    .contact-title{
+        article{
+            width: 50%;
+            
         }
     }
 }

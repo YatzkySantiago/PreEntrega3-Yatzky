@@ -17,6 +17,11 @@
         font-weight: bold;
         margin: 0;
     }
+    h1{
+        font-weight: bold;
+        margin: 0;
+        font-size: 30px
+    }
 }
 .product-box{
     @include flex-center;
@@ -29,7 +34,7 @@
     p{
         font-weight: bold;
         text-align: center;
-        font-size: smaller;
+        font-size: 12px;
     }
     img{
         width: 90%;
